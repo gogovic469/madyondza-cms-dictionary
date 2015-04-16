@@ -1,8 +1,24 @@
 import os
 
 SECRET_KEY = '_*tu=*4%$nus+-0+vg5g-=35(7tknc3na3g=8muv$x6hs^98m1'
-DEBUG = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
+DEBUG = True
+
+ROOT_URLCONF = 'dictionary.urls'
+WSGI_APPLICATION = 'dictionary.wsgi.application'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = 'static/'
+
+TEMPLATE_URL = 'templates/'
+
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -26,39 +42,38 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'dictionary.urls'
-WSGI_APPLICATION = 'dictionary.wsgi.application'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
-        'USER': 'postgres',  # Not used with sqlite3.
-        'PASSWORD': 'postgres',  # Not used with sqlite3.
-        'HOST': '',  # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '5432',  # Set to empty string for default. Not used with
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '',
+        'PORT': '5432',
+    },
+    'local': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3',
     }
 }
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = 'static/'
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, TEMPLATE_URL)],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, STATIC_URL),
-)
-
-TEMPLATE_URL = 'templates/'
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, TEMPLATE_URL),
 )

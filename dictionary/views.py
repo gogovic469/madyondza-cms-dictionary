@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-
+from models import Entry
 
 def home(request):
     heading = 'Madyondza Dictionary'
