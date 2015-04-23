@@ -1,7 +1,5 @@
 # Speak African
 
-This site helps you speak African.
-
 What do you do when you want to find the meaning of a word? Back in the day you'd pick up a dictionary and look through 
 it.
 
