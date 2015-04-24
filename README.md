@@ -26,6 +26,6 @@ the world!
 
 Follow these [installation instructions](https://gist.github.com/kurhula/1121bcad8516bc19d46d).
 
-Go to localhost:5000 and you should see "Madyondza Dictionary" in bold.
+Go to [localhost:5000](localhost:5000) and you should see "Madyondza Dictionary" in bold.
 
-Go to localhost:5000/admin and that's your Django Admin dashboard.
+Go to [localhost:5000/admin](localhost:5000/admin) and that's your Django Admin dashboard.
