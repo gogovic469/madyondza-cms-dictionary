@@ -19,3 +19,12 @@ let alone grow. It will only decay.
 Let's build an application that will allow anyone to search for meanings of words starting with the Xitsonga language. 
 As the project grows, we will incorporate even more languages. Come join us for these exciting times in the history of 
 the world!
+
+# Getting Started Guide
+
+# Developer's Local Environment
+
+<script src="https://gist.github.com/kurhula/1121bcad8516bc19d46d.js"></script>
+
+Go to localhost:5000 and you should see "Madyondza Dictionary" in bold.
+Go to localhost:5000/admin and that's your Django Admin dashboard.
