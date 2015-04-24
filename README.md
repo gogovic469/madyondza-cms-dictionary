@@ -12,7 +12,7 @@ meaning of any English, French or German word, such functionality has not been b
 the exception of [Zulu](https://isizulu.net/), [Swahili](http://kamusi.org/languages/swahili), 
 [Yoruba](http://www.yorubadictionary.com/) and perhaps a few other dominant African languages.
 
-While Google Translate [https://translate.google.com/] happens to be the most widely used translator, I can count with 
+While [Google Translate](https://translate.google.com/) happens to be the most widely used translator, I can count with 
 my two hands the number of African languages for which it caters. A language that is not searchable will not stay in use, 
 let alone grow. It will only decay.
 
@@ -26,6 +26,6 @@ the world!
 
 Follow these [installation instructions](https://gist.github.com/kurhula/1121bcad8516bc19d46d).
 
-Go to [localhost:5000](localhost:5000) and you should see "Madyondza Dictionary" in bold.
+Go to [localhost:5000](http://localhost:5000) and you should see "Madyondza Dictionary" in bold.
 
-Go to [localhost:5000/admin](localhost:5000/admin) and that's your Django Admin dashboard.
+Go to [localhost:5000/admin](http://localhost:5000/admin) and that's your Django Admin dashboard.
